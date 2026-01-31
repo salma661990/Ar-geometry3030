@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تجربة الأشكال الهندسية بالواقع المعزز</title>
+
+  <!-- مكتبة A-Frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+  <!-- مكتبة MindAR -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+<a-scene
+  mindar-image="imageTargetSrc: targets/geometry.mind;"
+  vr-mode-ui="enabled: false"
+  device-orientation-permission-ui="enabled: true">
+
+  <!-- الكاميرا -->
+  <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+  <!-- المجسم الهندسي -->
+  <a-entity mindar-image-target="targetIndex: 0">
+    <!-- مكعب -->
+    <a-box color="#4CC3D9" depth="1" height="1" width="1"></a-box>
+  </a-entity>
+
+</a-scene>
+
+</body>
+</html>
